@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+  --color-primary: #3b82f6; /* vibrant blue */
+  --color-primary-hover: #2563eb;
+  --color-primary-light: #60a5fa;
+  --color-secondary: #06b6d4; /* cyan accent */
+  --color-secondary-hover: #0891b2;
+
+  /* Status Colors - Modern */
+  --color-success: #10b981; /* emerald green */
+  --color-danger: #ef4444; /* bright red */
+  --color-warning: #f59e0b; /* amber */
+  --color-info: #3b82f6; /* blue */
+
+  /* Light Theme Background & Surface */
+  --color-background: #f8fafc;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f1f5f9;
+  --color-surface-alt: #f8fafc;
+  --color-muted: #e2e8f0;
+
+  /* Text Colors - High Contrast */
+  --color-text: #0f172a;
+  --color-text-light: #334155;
+  --color-text-muted: #64748b;
+  --color-text-accent: #2563eb; /* blue accent text */
+
+  /* Borders & Dividers */
+  --color-border: #e2e8f0; /* subtle divider */
+  --color-border-light: #cbd5e1; /* stronger divider */
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+  --gradient-accent: linear-gradient(135deg, #06b6d4 0%, #10b981 100%);
+
+  /* Modern Shadows */
+  --shadow-soft: 0 4px 16px rgba(15, 23, 42, 0.08);
+  --shadow-soft-lg: 0 10px 32px rgba(15, 23, 42, 0.12);
+  --shadow-xl: 0 20px 48px rgba(15, 23, 42, 0.16);
+
+  /* Modern Rounded Corners */
+  --radius-soft: 0.75rem;
+  --radius-soft-lg: 1.25rem;
+  --radius-xl: 1.5rem;
+
+  /* Typography */
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "Monaco", "Courier New", monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-text antialiased min-h-screen font-sans;
+  }
+
+  h1 {
+    @apply text-4xl font-black tracking-tighter text-text mb-4;
+  }
+  h2 {
+    @apply text-3xl font-bold tracking-tight text-text mb-3;
+  }
+  h3 {
+    @apply text-xl font-semibold tracking-tight text-text mb-2;
+  }
+  p {
+    @apply text-base leading-relaxed text-text-light mb-4;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+}
